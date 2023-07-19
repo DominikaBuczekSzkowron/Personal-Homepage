@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "./components/Container";
+import { Section } from "./components/Section";
+import { Image } from "./components/Image";
+import pic from "./picture.png";
+import { Sections } from "./styled";
+import { List } from "./components/List";
+import { Toggle } from "./components/Toggle";
+import { useState } from "react";
+import { GlobalStyle } from "./GlobalStyle";
+import { ThemeProvider, useTheme } from "styled-components";
+import { lightTheme, darkTheme } from "./theme";
 
-function App() {
+export const App = () => {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  const logState = (theme) => {
+    console.log("Toggled:", theme);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <>
+        <GlobalStyle />
+        <Container>
+          <Toggle
+            label={"DARK MODE " + (theme === "light" ? "OFF" : "ON")}
+            toggled={true}
+            onClick={toggleTheme}
+          />
+          <Sections>
+            <>
+              <Image src={pic} alt="Dominika" />
+              <Section
+                text="THIS IS"
+                title="Dominika Buczek-Szkowron"
+                content="I’m a passionate Frontend Developer in love with React,currently looking for new job opportunities."
+              ></Section>
+            </>
+          </Sections>
+          <List title="My skill includes" data="seae"></List>
+        </Container>
+      </>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
