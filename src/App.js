@@ -7,7 +7,7 @@ import { List } from "./components/List";
 import { Toggle } from "./components/Toggle";
 import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
-import { ThemeProvider, useTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 
 export const App = () => {
@@ -20,9 +20,6 @@ export const App = () => {
     }
   };
 
-  const logState = (theme) => {
-    console.log("Toggled:", theme);
-  };
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <>
