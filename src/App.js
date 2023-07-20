@@ -5,13 +5,15 @@ import pic from "./picture.png";
 import { Sections } from "./styled";
 import { List } from "./components/List";
 import { Toggle } from "./components/Toggle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 
 export const App = () => {
   const [theme, setTheme] = useState("light");
+  const [skills, setSkills] = useState([]);
+
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -19,6 +21,12 @@ export const App = () => {
       setTheme("light");
     }
   };
+
+  useEffect(() => {
+    fetch("skills.json")
+      .then((response) => response.json())
+      .then((skills) => setSkills(skills));
+  });
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -40,7 +48,7 @@ export const App = () => {
               ></Section>
             </>
           </Sections>
-          <List title="My skill includes" data="seae"></List>
+          <List title="My skill includes" data={skills}></List>
         </Container>
       </>
     </ThemeProvider>
