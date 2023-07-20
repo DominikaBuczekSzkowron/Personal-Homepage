@@ -14,6 +14,8 @@ html {
 body {
   background-color: ${({ theme }) => theme.color.background};
   font-family: 'Inter', sans-serif;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 `;
