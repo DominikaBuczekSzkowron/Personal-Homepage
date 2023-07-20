@@ -5,7 +5,9 @@ export const List = ({ title, data }) => (
     <Wrapper>
       <Header>{title}</Header>
       <ul>
-        <li>{data}</li>
+        {data.map((element) => (
+          <li key={element.id}>{element.skill}</li>
+        ))}
       </ul>
     </Wrapper>
   </>
