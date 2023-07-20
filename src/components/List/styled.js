@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  margin-top: 5px;
+  margin-bottom: 36px;
   box-shadow: 0px 16px 58px 0px #090a3308;
   box-shadow: 0px -2px 50px 0px #090a3305;
   max-width: 1216px;
