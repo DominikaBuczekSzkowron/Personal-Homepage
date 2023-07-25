@@ -20,3 +20,9 @@ export const CardContainer = styled.div`
   column-gap: 32px;
   row-gap: 32px;
 `;
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+`;

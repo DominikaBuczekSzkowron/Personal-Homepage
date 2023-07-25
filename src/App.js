@@ -4,15 +4,16 @@ import { MainButton } from "./components/MainButton";
 import { Image } from "./components/Image";
 import { PortfolioHeader } from "./components/PortfolioHeader";
 import { Card } from "./components/Card";
+import { Icon } from "./components/Icons";
 import pic from "./picture.png";
-import { Sections, Wrapper, CardContainer } from "./styled";
+import { Sections, Wrapper, CardContainer, Box } from "./styled";
 import { List } from "./components/List";
 import { Toggle } from "./components/Toggle";
 import { useEffect, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
-
+import { ReactComponent as GitIcon } from "./github.svg";
 export const App = () => {
   const [theme, setTheme] = useState("light");
   const [skills, setSkills] = useState([]);
@@ -73,30 +74,9 @@ export const App = () => {
                 subtitle="My resent projects"
               />
               <CardContainer>
-                <Card
-                  title="Movies Browser"
-                  content="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
-                  demoLink="https://link.com"
-                  codeLink="https://code.com"
-                ></Card>
-                <Card
-                  title="Movies Browser"
-                  content="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
-                  demoLink="https://link.com"
-                  codeLink="https://code.com"
-                ></Card>
-                <Card
-                  title="Movies Browser"
-                  content="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
-                  demoLink="https://link.com"
-                  codeLink="https://code.com"
-                ></Card>
-                <Card
-                  title="Movies Browser"
-                  content="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
-                  demoLink="https://link.com"
-                  codeLink="https://code.com"
-                ></Card>
+                {[...Array(5)].map((index, i) => (
+                  <Card index={i}></Card>
+                ))}
               </CardContainer>
             </Wrapper>
           </Sections>
@@ -105,6 +85,20 @@ export const App = () => {
             title="dominikabuczekszkowron@gmail.com"
             content="I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me"
           ></Section>
+          <Box>
+            <Icon
+              link="https://github.com/DominikaBuczekSzkowron"
+              icon={<GitIcon />}
+            ></Icon>
+            <Icon
+              link="https://github.com/DominikaBuczekSzkowron"
+              icon={<GitIcon />}
+            ></Icon>
+            <Icon
+              link="https://github.com/DominikaBuczekSzkowron"
+              icon={<GitIcon />}
+            ></Icon>
+          </Box>
         </Container>
       </>
     </ThemeProvider>

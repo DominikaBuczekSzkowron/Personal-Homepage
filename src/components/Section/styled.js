@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 export const Pretitle = styled.p`
   font-weight: 700;
   font-size: 12px;
+  color: ${({ theme }) => theme.color.text};
 `;
 
 export const Title = styled.h1`
