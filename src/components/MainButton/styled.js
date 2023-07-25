@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const EmailButton = styled.div`
   width: 154px;
-  max-height: 49px;
+  height: 49px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.color.additives};
   cursor: pointer;
@@ -12,7 +12,7 @@ export const EmailButton = styled.div`
   align-items: center;
 `;
 
-export const EmailButtonText = styled.p`
+export const EmailButtonText = styled.a`
   color: ${({ theme }) => theme.color.buttonText};
   text-decoration: none;
 `;

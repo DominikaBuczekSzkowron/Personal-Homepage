@@ -9,9 +9,9 @@ export const MainButton = ({ email, subject = "", body = "" }) => {
 
   return (
     <EmailButton>
-      <a href={`mailto:${email}${params}`}>
-        <EmailButtonText>HIRE ME!</EmailButtonText>
-      </a>
+      <EmailButtonText href={`mailto:${email}${params}`}>
+        HIRE ME!
+      </EmailButtonText>
     </EmailButton>
   );
 };
