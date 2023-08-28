@@ -1,4 +1,4 @@
-import { EmailButton, EmailButtonText } from "./styled";
+import { Button, ButtonText } from "../../components/StyledButton/styled";
 
 export const MainButton = ({ email, subject = "", body = "" }) => {
   let params = subject || body ? "?" : "";
@@ -8,10 +8,8 @@ export const MainButton = ({ email, subject = "", body = "" }) => {
     body=${encodeURIComponent(body)}`;
 
   return (
-    <EmailButton>
-      <EmailButtonText href={`mailto:${email}${params}`}>
-        HIRE ME!
-      </EmailButtonText>
-    </EmailButton>
+    <Button>
+      <ButtonText href={`mailto:${email}${params}`}>HIRE ME!</ButtonText>
+    </Button>
   );
 };
