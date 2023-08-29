@@ -1,6 +1,7 @@
 import { usePortfolio } from "./usePortfolio";
 import { Wrapper, Header, Content, Links, Container } from "./styled";
 import { ErrorSection } from "../../components/Error/index";
+import { LoadingView } from "../Loading";
 
 export const Card = ({ index }) => {
   const [fetchstate, fetchName, fetchDescription, fetchLInk, fetchDemo] =
@@ -9,7 +10,7 @@ export const Card = ({ index }) => {
   return (
     <Wrapper>
       {fetchstate.state === "loading" ? (
-        <div>Trwa ładowanie strony</div>
+        <LoadingView />
       ) : fetchstate.state === "error" ? (
         <ErrorSection />
       ) : (

@@ -9,6 +9,7 @@ export const lightTheme = {
     border: "#D1D5DA4D",
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
+    spinner: "#0366D6", //blue LM
   },
 };
 
@@ -23,5 +24,6 @@ export const darkTheme = {
     border: "#363636",
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
+    spinner: "#2188FF", //blue DM
   },
 };
