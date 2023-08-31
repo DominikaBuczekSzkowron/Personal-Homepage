@@ -3,7 +3,7 @@ import { Section } from "./components/Section";
 import { MainButton } from "./components/MainButton";
 import { Image } from "./components/Image";
 import { PortfolioHeader } from "./components/PortfolioHeader";
-import { Card } from "./components/Card";
+import { Projects } from "./components/Project";
 import { Icon } from "./components/Icons";
 import pic from "./picture.png";
 import { Sections, Wrapper, CardContainer, Box } from "./styled";
@@ -75,7 +75,7 @@ export const App = () => {
               />
               <CardContainer>
                 {[...Array(5)].map((index, i) => (
-                  <Card index={i}></Card>
+                  <Projects index={i}></Projects>
                 ))}
               </CardContainer>
             </Wrapper>
