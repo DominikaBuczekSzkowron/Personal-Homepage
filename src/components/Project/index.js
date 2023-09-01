@@ -9,14 +9,14 @@ import {
   selectProjectList,
   selectProjectStatus,
 } from "./projectSlice";
+import { ProjectCard } from "../../Common/ProjectCard/Index";
 
-export const Projects = ({ index }) => {
-  const dispatch = useDispatch;
+export const Projects = () => {
+  const dispatch = useDispatch();
   const projectData = useSelector(selectProjectList);
   const projectDataFetchState = useSelector(selectProjectStatus);
 
-  const [fetchName, fetchDescription, fetchLInk, fetchDemo] =
-    usePortfolio(index);
+  //const [fetchName, fetchDescription, fetchLInk, fetchDemo] =  usePortfolio(index);
 
   useEffect(() => {
     dispatch(fetchProject());
@@ -24,16 +24,14 @@ export const Projects = ({ index }) => {
 
   const renderProjectsList = () => (
     <>
-      <Header>{fetchName}</Header>
-      <Content>{fetchDescription}</Content>
-      <Container>
-        <Content>Demo: </Content>
-        <Links>{<a href={`${fetchDemo}`}>{fetchDemo}</a>}</Links>
-      </Container>
-      <Container>
-        <Content>Code: </Content>
-        <Links>{<a href={`${fetchLInk}`}>{fetchLInk}</a>}</Links>
-      </Container>
+      {[...Array(5)].map((index, i) => (
+        <ProjectCard
+          name={`name ${index}`}
+          description="description"
+          html_url="html_url"
+          homepage="homepage"
+        />
+      ))}
     </>
   );
   return (
@@ -41,7 +39,7 @@ export const Projects = ({ index }) => {
       <Wrapper>
         {projectDataFetchState === "loading" && <LoadingView />}
         {projectDataFetchState === "error" && <ErrorSection />}
-        {projectDataFetchState === "success" && renderProjectsList(projectData)}
+        {projectDataFetchState === "success" && renderProjectsList()}
       </Wrapper>
     </>
   );

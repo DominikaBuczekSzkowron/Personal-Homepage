@@ -74,9 +74,7 @@ export const App = () => {
                 subtitle="My resent projects"
               />
               <CardContainer>
-                {[...Array(5)].map((index, i) => (
-                  <Projects index={i}></Projects>
-                ))}
+                <Projects />
               </CardContainer>
             </Wrapper>
           </Sections>
