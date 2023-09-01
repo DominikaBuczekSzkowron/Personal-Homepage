@@ -2,7 +2,7 @@ import { usePortfolio } from "./usePortfolio";
 import { Wrapper, Header, Content, Links, Container } from "./styled";
 import { ErrorSection } from "../Error/index";
 import { LoadingView } from "../Loading";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {
   fetchProject,
@@ -12,11 +12,10 @@ import {
 
 export const Projects = ({ index }) => {
   const dispatch = useDispatch;
-
   const projectData = useSelector(selectProjectList);
   const projectDataFetchState = useSelector(selectProjectStatus);
 
-  const [fetchstate, fetchName, fetchDescription, fetchLInk, fetchDemo] =
+  const [fetchName, fetchDescription, fetchLInk, fetchDemo] =
     usePortfolio(index);
 
   useEffect(() => {
