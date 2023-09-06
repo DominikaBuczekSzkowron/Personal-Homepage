@@ -13,7 +13,7 @@ import { ProjectCard } from "../../Common/ProjectCard/Index";
 
 export const Projects = () => {
   const dispatch = useDispatch();
-  const projectData = useSelector(selectProjectList);
+  const projectsData = useSelector(selectProjectList);
   const projectDataFetchState = useSelector(selectProjectStatus);
 
   //const [fetchName, fetchDescription, fetchLInk, fetchDemo] =  usePortfolio(index);
@@ -22,25 +22,27 @@ export const Projects = () => {
     dispatch(fetchProject());
   }, [dispatch]);
 
-  const renderProjectsList = () => (
+  const renderProjectsList = (projectsData) => (
     <>
-      {[...Array(6)].map((index, i) => (
-        <Wrapper>
-          <ProjectCard
-            name={`name ${index}`}
-            description="description"
-            html_url="html_url"
-            homepage="homepage"
-          />
-        </Wrapper>
-      ))}
+      {projectsData
+        ? projectsData.map((project) => (
+            <Wrapper>
+              <ProjectCard
+                name={project.name}
+                description={project.description}
+                homepage={`https://github.com/DominikaBuczekSzkowron/${project.name}`}
+                html_url={project.html_url}
+              />
+            </Wrapper>
+          ))
+        : null}
     </>
   );
   return (
     <>
       {projectDataFetchState === "loading" && <LoadingView />}
       {projectDataFetchState === "error" && <ErrorSection />}
-      {projectDataFetchState === "success" && renderProjectsList()}
+      {projectDataFetchState === "success" && renderProjectsList(projectsData)}
     </>
   );
 };
