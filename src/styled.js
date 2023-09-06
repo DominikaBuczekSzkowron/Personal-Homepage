@@ -5,12 +5,12 @@ export const Sections = styled.article`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 36px;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const CardContainer = styled.div`

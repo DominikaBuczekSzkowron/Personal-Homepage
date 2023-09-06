@@ -24,23 +24,23 @@ export const Projects = () => {
 
   const renderProjectsList = () => (
     <>
-      {[...Array(5)].map((index, i) => (
-        <ProjectCard
-          name={`name ${index}`}
-          description="description"
-          html_url="html_url"
-          homepage="homepage"
-        />
+      {[...Array(6)].map((index, i) => (
+        <Wrapper>
+          <ProjectCard
+            name={`name ${index}`}
+            description="description"
+            html_url="html_url"
+            homepage="homepage"
+          />
+        </Wrapper>
       ))}
     </>
   );
   return (
     <>
-      <Wrapper>
-        {projectDataFetchState === "loading" && <LoadingView />}
-        {projectDataFetchState === "error" && <ErrorSection />}
-        {projectDataFetchState === "success" && renderProjectsList()}
-      </Wrapper>
+      {projectDataFetchState === "loading" && <LoadingView />}
+      {projectDataFetchState === "error" && <ErrorSection />}
+      {projectDataFetchState === "success" && renderProjectsList()}
     </>
   );
 };
