@@ -27,6 +27,6 @@ export const { fetchProject, setProject, setError } = projectSlice.actions;
 
 export const selectProjectState = (state) => state.project.data;
 export const selectProjectStatus = (state) => state.project.status;
-export const selectProjectList = (state) => selectProjectState(state).results;
+export const selectProjectList = (state) => selectProjectState(state);
 
 export default projectSlice.reducer;
