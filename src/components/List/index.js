@@ -1,14 +1,14 @@
-import { Header, Wrapper } from "./styled";
+import { Header, SkillItem, SkillsList, Wrapper } from "./styled";
 
 export const List = ({ title, data }) => (
   <>
     <Wrapper>
       <Header>{title}</Header>
-      <ul>
+      <SkillsList>
         {data.map((element) => (
-          <li key={element.id}>{element.skill}</li>
+          <SkillItem key={element.id}>{element.skill}</SkillItem>
         ))}
-      </ul>
+      </SkillsList>
     </Wrapper>
   </>
 );

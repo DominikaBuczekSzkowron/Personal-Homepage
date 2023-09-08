@@ -18,3 +18,27 @@ export const Header = styled.h2`
   border-bottom: solid 1px;
   border-color: ${({ theme }) => theme.color.horLine};
 `;
+
+export const SkillsList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.9px;
+`;
+
+export const SkillItem = styled.li`
+  color: ${({ theme }) => theme.color.text};
+  padding-left: 1.5em;
+  text-indent: -0.7em;
+
+  &::before {
+    content: "• ";
+    color: ${({ theme }) => theme.color.additives};
+  }
+`;
