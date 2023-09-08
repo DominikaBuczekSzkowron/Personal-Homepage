@@ -65,7 +65,10 @@ export const App = () => {
             </Wrapper>
           </Sections>
           <List title="My skill includes" data={skills}></List>
-          <List title="What I want to learn next" data={wantedSkills}></List>
+          <List
+            title="What I want to learn next &#128640;"
+            data={wantedSkills}
+          ></List>
 
           <Sections>
             <Wrapper>
