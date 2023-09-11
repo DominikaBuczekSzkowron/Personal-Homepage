@@ -5,6 +5,10 @@ export const Sections = styled.article`
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    flex-direction: column;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -19,6 +23,11 @@ export const CardContainer = styled.div`
   grid-template-rows: 1fr auto;
   column-gap: 32px;
   row-gap: 32px;
+
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
 `;
 
 export const Box = styled.div`

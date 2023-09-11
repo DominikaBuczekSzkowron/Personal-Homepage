@@ -30,6 +30,14 @@ export const SkillsList = styled.ul`
   font-weight: 400;
   line-height: 140%; /* 25.2px */
   letter-spacing: 0.9px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.ipod}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SkillItem = styled.li`
