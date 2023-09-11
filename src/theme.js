@@ -1,3 +1,9 @@
+const breakpoint = {
+  desktopMax: "1368px",
+  ipod: "1024px",
+  small: "767px",
+};
+
 export const lightTheme = {
   color: {
     background: "#FBFBFE", //whiteLilac
@@ -12,6 +18,7 @@ export const lightTheme = {
     buttonText: "#ffffff", //white:
     spinner: "#252525", //black
   },
+  breakpoint: breakpoint,
 };
 
 export const darkTheme = {
@@ -28,4 +35,5 @@ export const darkTheme = {
     spinner: "#252525", //black
     hoverborder: "rgba(3, 102, 214, 0.50)",
   },
+  breakpoint: breakpoint,
 };
