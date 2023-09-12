@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 70px 1fr;
 `;
 
 export const Header = styled.h2`
@@ -17,9 +17,19 @@ export const Content = styled.p`
   font-size: 18px;
 `;
 
-export const Links = styled.p`
+export const Links = styled.a`
   color: ${({ theme }) => theme.color.additives};
-  text-decoration: underline;
-  font-weight: 400;
+  text-decoration: none;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.9px;
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    filter: brightness(150%);
+  }
 `;

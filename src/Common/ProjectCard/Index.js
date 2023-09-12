@@ -7,11 +7,11 @@ export const ProjectCard = ({ name, description, html_url, homepage }) => {
       <Content>{description}</Content>
       <Container>
         <Content>Code: </Content>
-        <Links>{<a href={`${html_url}`}>{html_url}</a>}</Links>
+        {<Links href={`${html_url}`}>{html_url}</Links>}
       </Container>
       <Container>
         <Content>Demo: </Content>
-        <Links>{<a href={`${homepage}`}>{homepage}</a>}</Links>
+        {<Links href={`${homepage}`}>{homepage}</Links>}
       </Container>
     </>
   );
