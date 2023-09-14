@@ -1,4 +1,4 @@
-import { ReactComponent as GitIcon } from "../../github.svg";
+import { ReactComponent as GitIcon } from "../Icons/github.svg";
 
 export const Icon = () => (
   <div>

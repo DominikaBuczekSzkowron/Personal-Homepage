@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
-import { ReactComponent as GitIcon } from "./github.svg";
+import { ReactComponent as GitIcon } from "./components/Icons/github.svg";
 export const App = () => {
   const [theme, setTheme] = useState("light");
   const [skills, setSkills] = useState([]);
