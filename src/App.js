@@ -14,6 +14,8 @@ import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 import { ReactComponent as GitIcon } from "./components/Icons/github.svg";
+import { ReactComponent as FaceBookIcon } from "./components/Icons/fb.svg";
+import { ReactComponent as LinkedInIcon } from "./components/Icons/LinkedIN.svg";
 export const App = () => {
   const [theme, setTheme] = useState("light");
   const [skills, setSkills] = useState([]);
@@ -92,12 +94,12 @@ export const App = () => {
               icon={<GitIcon />}
             ></Icon>
             <Icon
-              link="https://github.com/DominikaBuczekSzkowron"
-              icon={<GitIcon />}
+              link="https://facebook.com/dominika.buczekszkowron"
+              icon={<FaceBookIcon />}
             ></Icon>
             <Icon
-              link="https://github.com/DominikaBuczekSzkowron"
-              icon={<GitIcon />}
+              link="https://linkedin.com/in/dominika-buczek-szkowron-61412349/"
+              icon={<LinkedInIcon />}
             ></Icon>
           </Box>
         </Container>
