@@ -1,5 +1,7 @@
+import { IconWrapper } from "./styled";
+
 export const Icon = ({ link, icon }) => (
-  <div>
+  <IconWrapper>
     <a href={`${link}`}>{icon}</a>
-  </div>
+  </IconWrapper>
 );

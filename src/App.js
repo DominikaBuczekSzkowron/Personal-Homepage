@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
-import { ReactComponent as GitIcon } from "./components/Icons/github.svg";
+import { ReactComponent as GithubIcon } from "./components/Icons/github_black.svg";
 import { ReactComponent as FaceBookIcon } from "./components/Icons/fb.svg";
 import { ReactComponent as LinkedInIcon } from "./components/Icons/LinkedIN.svg";
 export const App = () => {
@@ -91,15 +91,15 @@ export const App = () => {
           <Box>
             <Icon
               link="https://github.com/DominikaBuczekSzkowron"
-              icon={<GitIcon />}
+              icon={<GithubIcon width={"100%"} height={"100%"} />}
             ></Icon>
             <Icon
               link="https://facebook.com/dominika.buczekszkowron"
-              icon={<FaceBookIcon />}
+              icon={<FaceBookIcon width={"100%"} height={"100%"} />}
             ></Icon>
             <Icon
               link="https://linkedin.com/in/dominika-buczek-szkowron-61412349/"
-              icon={<LinkedInIcon />}
+              icon={<LinkedInIcon width={"100%"} height={"100%"} />}
             ></Icon>
           </Box>
         </Container>
