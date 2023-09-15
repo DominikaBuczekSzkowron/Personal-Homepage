@@ -31,7 +31,12 @@ export const CardContainer = styled.div`
 `;
 
 export const Box = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  grid-gap: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    grid-template-columns: repeat(3, 32px);
+    grid-gap: 16px;
+  }
 `;
