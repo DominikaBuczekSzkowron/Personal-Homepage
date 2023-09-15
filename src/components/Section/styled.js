@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 36px;
-  max-width: 633px;
+  padding: 36px 0px;
+  max-width: 778px;
 `;
 export const Pretitle = styled.p`
   font-weight: 700;
