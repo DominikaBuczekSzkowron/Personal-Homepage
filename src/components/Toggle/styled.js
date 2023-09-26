@@ -1,10 +1,18 @@
 import styled from "styled-components";
+//
+import brightness from "../Icons/brightness.svg";
+//{ ReactComponent as Brightness } from "../Icons/brightness.svg";
+
+export const WrapToggle = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
 
 export const SwitchLabel = styled.label`
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 30px;
+  width: 48px;
+  height: 26px;
 `;
 
 export const SwitchSpan = styled.span`
@@ -14,17 +22,21 @@ export const SwitchSpan = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2c3e50;
+  background: ${({ theme }) => theme.color.border};
+  border: 1px solid ${({ theme }) => theme.color.text};
   transition: 0.3s;
   border-radius: 30px;
 
   &:before {
     position: absolute;
     content: "";
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     left: 3px;
-    bottom: 2.6px;
+    bottom: 2px;
+    background-image: url("${brightness}");
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #fff;
     border-radius: 50%;
     transition: 0.3s;
@@ -41,14 +53,15 @@ export const SwitchInput = styled.input`
   }
 
   &:checked + span:before {
-    transform: translateX(29px);
+    transform: translateX(20px);
   }
 `;
 
 export const SwitchStrong = styled.strong`
   position: absolute;
   color: ${({ theme }) => theme.color.text};
-  left: 100%;
+  right: 100%;
+  padding-right: 12px;
   width: max-content;
   line-height: 30px;
   margin-left: 10px;
