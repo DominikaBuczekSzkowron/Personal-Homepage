@@ -13,6 +13,7 @@ export const lightTheme = {
     horLine: "#D1D5DA", //iron
     additives: "#0366D6", //blue LM
     border: "rgba(209, 213, 218, 0.30)",
+    labelBackground: "#E5E5E5",
     hoverborder: "rgba(3, 102, 214, 0.20)",
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
@@ -30,6 +31,7 @@ export const darkTheme = {
     horLine: "#E5E5E5", //light gray
     additives: "#2188FF", //blue DM
     border: "rgba(209, 213, 218, 0.10)",
+    labelBackground: "rgba(54, 54, 54, 0.72)",
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
     spinner: "#252525", //black
