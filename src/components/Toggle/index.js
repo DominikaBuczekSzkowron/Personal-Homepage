@@ -6,7 +6,6 @@ import {
   SwitchStrong,
   WrapToggle,
 } from "./styled";
-//import { ReactComponent as Brightness } from "../Icons/brightness.svg";
 
 export const Toggle = ({ label, toggled, onClick }) => {
   const [isToggled, toggle] = useState(toggled);
@@ -24,7 +23,7 @@ export const Toggle = ({ label, toggled, onClick }) => {
           defaultChecked={isToggled}
           onClick={callback}
         />
-        <SwitchSpan />
+        <SwitchSpan defaultChecked={isToggled} />
 
         <SwitchStrong>{label}</SwitchStrong>
       </SwitchLabel>

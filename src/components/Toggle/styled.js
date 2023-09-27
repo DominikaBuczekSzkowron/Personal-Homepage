@@ -1,7 +1,4 @@
 import styled from "styled-components";
-//
-import brightness from "../Icons/brightness.svg";
-//{ ReactComponent as Brightness } from "../Icons/brightness.svg";
 
 export const WrapToggle = styled.div`
   display: flex;
@@ -22,8 +19,8 @@ export const SwitchSpan = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  background: ${({ theme }) => theme.color.border};
-  border: 1px solid ${({ theme }) => theme.color.text};
+  background: ${({ theme }) => theme.color.labelBackground};
+  border: 1px solid ${({ theme }) => theme.color.labelBorder};
   transition: 0.3s;
   border-radius: 30px;
 
@@ -34,10 +31,10 @@ export const SwitchSpan = styled.span`
     width: 20px;
     left: 3px;
     bottom: 2px;
-    background-image: url("${brightness}");
+    background-image: ${({ theme }) => `url(${theme.icon.brightnessIcon});`};
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.color.brightnessIconBorder};
     border-radius: 50%;
     transition: 0.3s;
   }
