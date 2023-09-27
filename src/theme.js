@@ -5,6 +5,7 @@ const breakpoint = {
   desktopMax: "1368px",
   ipod: "1024px",
   small: "767px",
+  mini: "420px",
 };
 
 export const lightTheme = {

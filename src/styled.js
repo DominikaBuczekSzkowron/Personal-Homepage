@@ -8,6 +8,7 @@ export const Sections = styled.article`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     flex-direction: column;
+    padding-bottom: 48px;
   }
 `;
 
