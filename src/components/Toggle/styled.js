@@ -55,12 +55,19 @@ export const SwitchInput = styled.input`
 `;
 
 export const SwitchStrong = styled.strong`
-  position: absolute;
-  color: ${({ theme }) => theme.color.text};
-  right: 100%;
-  padding-right: 12px;
-  width: max-content;
-  line-height: 30px;
-  margin-left: 10px;
-  cursor: pointer;
+  @media (min-width: ${({ theme }) => theme.breakpoint.mini}) {
+    position: absolute;
+    color: ${({ theme }) => theme.color.text};
+    right: 100%;
+    padding-right: 12px;
+    width: max-content;
+    line-height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mini}) {
+    color: red;
+    display: none;
+  }
 `;
