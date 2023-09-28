@@ -1,5 +1,4 @@
-import { usePortfolio } from "./usePortfolio";
-import { Wrapper, Header, Content, Links, Container } from "./styled";
+import { Wrapper } from "./styled";
 import { ErrorSection } from "../Error/index";
 import { LoadingView } from "../Loading";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,8 +15,6 @@ export const Projects = () => {
   const projectsData = useSelector(selectProjectList);
   const projectDataFetchState = useSelector(selectProjectStatus);
 
-  //const [fetchName, fetchDescription, fetchLInk, fetchDemo] =  usePortfolio(index);
-
   useEffect(() => {
     dispatch(fetchProject());
   }, [dispatch]);
@@ -30,7 +27,7 @@ export const Projects = () => {
               <ProjectCard
                 name={project.name}
                 description={project.description}
-                homepage={`https://github.com/DominikaBuczekSzkowron/${project.name}`}
+                homepage={project.homepage}
                 html_url={project.html_url}
               />
             </Wrapper>
@@ -46,25 +43,3 @@ export const Projects = () => {
     </>
   );
 };
-
-// const data = await response.json();
-//         setTimeout(() => {
-//           setFetchState({
-//             state: "success",
-//           });
-//           setFetchName(data[index].name);
-//           setFetchDescription(data[index].description);
-//           setFetchLink(data[index].html_url);
-//           setFetchDemo(data[index].homepage);
-//         }, 1000);
-//       } catch (error) {
-//         setFetchState({
-//           state: "error",
-//         });
-//         console.error(error);
-//       }
-//     })();
-//   }, [index]);
-
-//   return [fetchstate, fetchName, fetchDescription, fetchLInk, fetchDemo];
-// };

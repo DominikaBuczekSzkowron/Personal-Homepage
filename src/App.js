@@ -1,6 +1,6 @@
 import { Container } from "./components/Container";
 import { Section } from "./components/Section";
-import { MainButton } from "./components/MainButton";
+import { MailMe } from "./components/MainButton";
 import { Image } from "./components/Image";
 import { PortfolioHeader } from "./components/PortfolioHeader";
 import { Projects } from "./components/Project";
@@ -16,6 +16,7 @@ import { lightTheme, darkTheme } from "./theme";
 import { ReactComponent as GithubIcon } from "./components/Icons/github_black.svg";
 import { ReactComponent as FaceBookIcon } from "./components/Icons/fb.svg";
 import { ReactComponent as LinkedInIcon } from "./components/Icons/LinkedIN.svg";
+import { Button } from "./components/StyledButton/styled";
 export const App = () => {
   const [theme, setTheme] = useState("light");
   const [skills, setSkills] = useState([]);
@@ -58,12 +59,17 @@ export const App = () => {
                 text="THIS IS"
                 title="Dominika Buczek-Szkowron"
                 content="I’m a passionate Frontend Developer in love with React,currently looking for new job opportunities."
+                email=""
+                params=""
+                hideMail
               ></Section>
-              <MainButton
-                email="dominikabuczek@gmail.com"
-                subject="JOB"
-                body="You are great! We want you on board!"
-              />
+              <Button>
+                <MailMe
+                  email="dominikabuczek@gmail.com"
+                  subject="JOB"
+                  body="You are great! We want you on board!"
+                />
+              </Button>
             </Wrapper>
           </Sections>
           <List title="My skill includes" data={skills}></List>
@@ -85,9 +91,13 @@ export const App = () => {
           </Sections>
           <Section
             text="LET'S TALK!"
-            title="dominikabuczekszkowron@gmail.com"
+            email="dominikabuczek@gmail.com"
+            subject="JOB"
+            body="You are great! We want you on board!"
+            title=""
             content="I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me"
           ></Section>
+
           <Box>
             <Icon
               link="https://github.com/DominikaBuczekSzkowron"
