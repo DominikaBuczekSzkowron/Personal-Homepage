@@ -47,7 +47,7 @@ export const darkTheme = {
     brightnessSun: "#252525",
     brightnessIconBorder: "#FFF",
     labelBorder: "#FFFFFF",
-    labelBackground: "rgba(54, 54, 54, 0.72)",
+    labelBackground: "rgba(209, 213, 218, 0.4)",
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
     spinner: "#252525", //black
