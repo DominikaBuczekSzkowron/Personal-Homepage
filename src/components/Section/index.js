@@ -7,9 +7,17 @@ import {
   MailWrapper,
 } from "./styled";
 
-export const Section = ({ hideMail, text, title, content, email, params }) => (
+export const Section = ({
+  alignLeft,
+  hideMail,
+  text,
+  title,
+  content,
+  email,
+  params,
+}) => (
   <>
-    <Wrapper>
+    <Wrapper alignLeft={alignLeft}>
       <Pretitle>{text}</Pretitle>
       <MailWrapper hideMail={hideMail}>
         <MailText href={`mailto:${email}${params}`}>

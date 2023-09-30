@@ -5,6 +5,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 36px 0px 36px 36px;
   max-width: 778px;
+
+  ${({ inlineLeft }) =>
+    inlineLeft &&
+    css`
+      padding: 36px 0px;
+    `}
 `;
 
 export const MailWrapper = styled.div`

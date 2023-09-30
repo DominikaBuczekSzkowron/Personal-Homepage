@@ -92,7 +92,7 @@ export const App = () => {
             </Wrapper>
           </Sections>
           <Section
-            inlineLeft
+            alignLeft
             text="LET'S TALK!"
             email="dominikabuczek@gmail.com"
             subject="JOB"
