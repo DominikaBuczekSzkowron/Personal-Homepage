@@ -7,6 +7,7 @@ export const Button = styled.div`
   background-color: ${({ theme }) => theme.color.additives};
   cursor: pointer;
   margin-left: 36px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -5,6 +5,7 @@ export const Sections = styled.article`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     flex-direction: column;
