@@ -42,8 +42,10 @@ export const App = () => {
       .then((wantedSkills) => setWantedSkills(wantedSkills));
   }, []);
 
+  const providedTheme = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={providedTheme}>
       <>
         <GlobalStyle />
         <Container>
@@ -90,6 +92,7 @@ export const App = () => {
             </Wrapper>
           </Sections>
           <Section
+            inlineLeft
             text="LET'S TALK!"
             email="dominikabuczek@gmail.com"
             subject="JOB"
@@ -101,15 +104,33 @@ export const App = () => {
           <Box>
             <Icon
               link="https://github.com/DominikaBuczekSzkowron"
-              icon={<GithubIcon width={"100%"} height={"100%"} />}
+              icon={
+                <GithubIcon
+                  width={"100%"}
+                  height={"100%"}
+                  fill={providedTheme.color.socialIcon}
+                />
+              }
             ></Icon>
             <Icon
               link="https://facebook.com/dominika.buczekszkowron"
-              icon={<FaceBookIcon width={"100%"} height={"100%"} />}
+              icon={
+                <FaceBookIcon
+                  width={"100%"}
+                  height={"100%"}
+                  fill={providedTheme.color.socialIcon}
+                />
+              }
             ></Icon>
             <Icon
               link="https://linkedin.com/in/dominika-buczek-szkowron-61412349/"
-              icon={<LinkedInIcon width={"100%"} height={"100%"} />}
+              icon={
+                <LinkedInIcon
+                  width={"100%"}
+                  height={"100%"}
+                  fill={providedTheme.color.socialIcon}
+                />
+              }
             ></Icon>
           </Box>
         </Container>

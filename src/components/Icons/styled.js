@@ -8,6 +8,6 @@ export const IconWrapper = styled.div`
   }
 
   &:hover {
-    filter: brightness(150%);
+    filter: contrast(80%);
   }
 `;

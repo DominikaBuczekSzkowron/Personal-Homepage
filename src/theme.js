@@ -28,6 +28,7 @@ export const lightTheme = {
     activeBorder: "#0366D6",
     buttonText: "#ffffff", //white:
     spinner: "#252525", //black
+    socialIcon: "#252525",
   },
   breakpoint: breakpoint,
 };
@@ -52,6 +53,7 @@ export const darkTheme = {
     buttonText: "#ffffff", //white:
     spinner: "#252525", //black
     hoverborder: "rgba(3, 102, 214, 0.50)",
+    socialIcon: "#fff",
   },
   breakpoint: breakpoint,
 };
