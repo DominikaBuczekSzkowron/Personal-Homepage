@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
   padding: 36px 0px 36px 36px;
   max-width: 778px;
 
-  ${({ inlineLeft }) =>
-    inlineLeft &&
+  ${({ alignLeft }) =>
+    alignLeft &&
     css`
       padding: 36px 0px;
     `}
