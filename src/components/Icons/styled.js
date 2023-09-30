@@ -5,6 +5,7 @@ export const IconWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     height: 32px;
+    margin: 16px;
   }
 
   &:hover {
