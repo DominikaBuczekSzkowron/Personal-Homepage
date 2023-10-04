@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
 `;
 
 export const MailWrapper = styled.div`
+  &:hover {
+    filter: contrast(50%);
+  }
   ${({ hideMail }) =>
     hideMail &&
     css`

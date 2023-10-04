@@ -81,7 +81,7 @@ export const App = () => {
               </Button>
             </Wrapper>
           </Sections>
-          <List title="My skill includes" data={skills}></List>
+          <List title="My skill includes &#128736;" data={skills}></List>
           <List
             title="What I want to learn next &#128640;"
             data={wantedSkills}

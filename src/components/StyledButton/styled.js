@@ -11,6 +11,9 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    filter: brightness(120%);
+  }
 `;
 
 export const ButtonText = styled.a`
