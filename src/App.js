@@ -67,7 +67,7 @@ export const App = () => {
               <Section
                 text="THIS IS"
                 title="Dominika Buczek-Szkowron"
-                content="I’m a passionate Frontend Developer in love with React,currently looking for new job opportunities."
+                content="I’m a passionate Frontend Developer in love with React, currently looking for new job opportunities."
                 email=""
                 params=""
                 hideMail
