@@ -17,17 +17,24 @@ import { ReactComponent as GithubIcon } from "./components/Icons/github_black.sv
 import { ReactComponent as FaceBookIcon } from "./components/Icons/fb.svg";
 import { ReactComponent as LinkedInIcon } from "./components/Icons/LinkedIN.svg";
 import { Button } from "./components/StyledButton/styled";
+
+import {
+  getThemeFromLocalStorage,
+  saveThemeInLocalStorage,
+} from "./themeLocalStorage";
+
 export const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(getThemeFromLocalStorage());
   const [skills, setSkills] = useState([]);
   const [wantedSkills, setWantedSkills] = useState([]);
 
   const toggleTheme = () => {
+    let newTheme = "light";
     if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
+      newTheme = "dark";
     }
+    saveThemeInLocalStorage(newTheme);
+    setTheme(newTheme);
   };
 
   useEffect(() => {
@@ -51,7 +58,7 @@ export const App = () => {
         <Container>
           <Toggle
             label={"DARK MODE " + (theme === "light" ? "OFF" : "ON")}
-            toggled={true}
+            toggled={theme === "light"}
             onClick={toggleTheme}
           />
           <Sections>
