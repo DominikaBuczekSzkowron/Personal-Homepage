@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "skill": "React Context"
+  },
+  {
+    "id": 2,
+    "skill": "Node.js"
+  },
+  {
+    "id": 3,
+    "skill": "Cypress"
+  },
+  {
+    "id": 4,
+    "skill": "Unit testing"
+  },
+  {
+    "id": 5,
+    "skill": "TypeScript"
+  },
+  {
+    "id": 6,
+    "skill": "JS classes"
+  }
+]

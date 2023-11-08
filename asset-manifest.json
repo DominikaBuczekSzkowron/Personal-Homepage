@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/Personal-Homepage/static/js/main.7607788f.js",
+    "static/js/787.162bc9a0.chunk.js": "/Personal-Homepage/static/js/787.162bc9a0.chunk.js",
+    "static/media/picture.png": "/Personal-Homepage/static/media/picture.321e0f39029e7dc16167.png",
+    "static/media/brightnessBlack.svg": "/Personal-Homepage/static/media/brightnessBlack.528fd321a75c0f9d924246a6c3ad495a.svg",
+    "static/media/brightnessWhite.svg": "/Personal-Homepage/static/media/brightnessWhite.28525fb6cc79f4edbbf60d9a8ce5cb15.svg",
+    "static/media/github_black.svg": "/Personal-Homepage/static/media/github_black.773153a26d8f74744b734e6764558b05.svg",
+    "static/media/github.svg": "/Personal-Homepage/static/media/github.a9062bf9626a38e8866f20e84ee3d71b.svg",
+    "static/media/Danger.svg": "/Personal-Homepage/static/media/Danger.9c0e6ac0777a618b502b6f9779d7379e.svg",
+    "index.html": "/Personal-Homepage/index.html",
+    "static/media/LinkedIN.svg": "/Personal-Homepage/static/media/LinkedIN.783f3794ad91bfd18902eea2856f25b4.svg",
+    "static/media/fb.svg": "/Personal-Homepage/static/media/fb.9e2974a8f4699c435b00a03bfed39d13.svg",
+    "main.7607788f.js.map": "/Personal-Homepage/static/js/main.7607788f.js.map",
+    "787.162bc9a0.chunk.js.map": "/Personal-Homepage/static/js/787.162bc9a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7607788f.js"
+  ]
+}
